@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessDotNet", "ChessDotNet\ChessDotNet.csproj", "{BE2E6962-A2B9-4C04-9B93-011F51617166}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessDotNet.Variants", "ChessDotNet.Variants\ChessDotNet.Variants.csproj", "{12306BF4-CAD8-4838-8F88-FB1EA95BDB61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessDotNet.Variants.Tests", "ChessDotNet.Variants.Tests\ChessDotNet.Variants.Tests.csproj", "{BDE515B6-CFF3-40E5-ACFF-BF7873487DA1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{816542C8-47A4-45CD-B0F1-9C01FACF65C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +35,15 @@ Global
 		{BDE515B6-CFF3-40E5-ACFF-BF7873487DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDE515B6-CFF3-40E5-ACFF-BF7873487DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDE515B6-CFF3-40E5-ACFF-BF7873487DA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{816542C8-47A4-45CD-B0F1-9C01FACF65C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{816542C8-47A4-45CD-B0F1-9C01FACF65C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{816542C8-47A4-45CD-B0F1-9C01FACF65C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{816542C8-47A4-45CD-B0F1-9C01FACF65C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4217FFE3-CBF9-4038-8126-7FA14D9916BB}
 	EndGlobalSection
 EndGlobal
