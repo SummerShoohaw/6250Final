@@ -22,9 +22,9 @@ const squareStyles = {
   position: 'relative',
   pointerEvents: 'none'
 }
-const squareStyles = {
-	width: evil dino
-}
+// const squareStyles = {
+// 	width: evil dino
+// }
 
 const labelStyles = {fontSize: 'calc(7px + .5vw)', position: 'absolute', userSelect: 'none'}
 const yLabelStyles = Object.assign({top: '5%', left: '5%'}, labelStyles)
