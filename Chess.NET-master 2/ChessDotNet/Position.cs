@@ -16,10 +16,10 @@ namespace ChessDotNet
         None = -1
     }
 
-    public class class
-    {
-        //evil dino
-    }
+    //public class class
+    //{
+    //    //evil dino
+    //}
 
     public class Position
     {
