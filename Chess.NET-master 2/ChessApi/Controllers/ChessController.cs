@@ -19,9 +19,8 @@ namespace ChessApi.Controllers
         //start game
         [HttpGet]
         [Route("/startgame")]
-        public int StartGame(){
+        public void StartGame(){
             game = ChessGame.GetGame();
-            return 1;
         }
 
         //parameters: 1 --> which player is moving

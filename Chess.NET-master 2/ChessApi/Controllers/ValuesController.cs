@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ChessDotNet;
 
 namespace ChessApi.Controllers
 {
@@ -10,6 +11,13 @@ namespace ChessApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        [HttpGet]
+        [Route("/123")]
+        public int GetValues(){
+            return 123;
+        }
+
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
