@@ -12,4 +12,10 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Models\ChessDotNet\bin\Debug\ChessDotNet.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessDotNet\ChessDotNet.csproj" />
+  </ItemGroup>
 </Project>

@@ -1,3 +1,6 @@
+// import axios from 'axios'
+
+const axios = require('axios')
 const React = require('react')
 const PropTypes = require('prop-types')
 const Draggable = require('react-draggable')
@@ -32,6 +35,7 @@ const xLabelStyles = Object.assign({bottom: '5%', right: '5%'}, labelStyles)
 
 class Chess extends React.Component {
   constructor(...args) {
+    axios.get('http://localhost:5001/api/chess/startgame').then(response => console.log(response.status));
     super(...args)
 
     this.els = {}
@@ -113,14 +117,12 @@ class Chess extends React.Component {
     const node = drag.node
     const {dragFrom, draggingPiece} = this.state
     const dragTo = this.coordsToPosition({x: node.offsetLeft + drag.x, y: node.offsetTop + drag.y})
-
+    axios.post('http://localhost:5001/api/game/move',draggingPiece.name+"-"+dragFrom.x+"-"+dragFrom.y+"-"+dragTo.x+"-"+dragTo.y).then(response => console.log(response.data));
     this.setState({dragFrom: null, targetTile: null, draggingPiece: null})
-
     if (dragFrom.pos !== dragTo.pos) {
       this.props.onMovePiece(draggingPiece, dragFrom.pos, dragTo.pos)
       return false
     }
-
     return true
   }
 

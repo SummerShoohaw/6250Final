@@ -9,9 +9,16 @@ namespace ChessDotNet
 {
     public class ChessGame
     {
+        static ChessGame refer = null;
         bool _drawn = false;
         string _drawReason = null;
         Player _resigned = Player.None;
+
+        public static ChessGame GetGame(){
+            if (refer == null)
+                refer = new ChessGame();
+            return refer;
+        }
 
         public bool DrawClaimed
         {
