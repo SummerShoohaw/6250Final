@@ -1,0 +1,76 @@
+{
+  "name": "react-chess",
+  "description": "Renders a chess board using React",
+  "version": "1.0.8",
+  "keywords": [
+    "chess",
+    "board",
+    "react",
+    "react-component"
+  ],
+  "main": "lib/react-chess.js",
+  "unpkg": "umd/react-chess.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "npm run clean && npm run compile && NODE_ENV=production webpack -p && react-scripts build",
+    "clean": "rimraf build/ lib/ coverage/ umd/*.js",
+    "compile": "babel --copy-files -d lib/ src/",
+    "deploy": "gh-pages-deploy",
+    "posttest": "eslint .",
+    "prepublishOnly": "npm run qa",
+    "qa": "npm test && npm run build",
+    "test": "jest --coverage",
+    "watch": "babel --watch --copy-files -d lib/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rexxars/react-chess.git"
+  },
+  "homepage" : "https://rexxars.github.io/react-chess/",
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "gh-pages-deploy": {
+    "noprompt": true,
+    "prep": [
+      "build"
+    ],
+    "staticpath": "build"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react-draggable": "^3.0.3",
+    "react-resize-aware": "^2.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.10",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.12.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-sanity": "^3.1.0",
+    "eslint-plugin-react": "^7.4.0",
+    "gh-pages-deploy": "^0.4.2",
+    "jest": "^21.2.1",
+    "prettier": "^1.8.2",
+    "react": "^16.1.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.1.0",
+    "react-scripts": "^1.0.17",
+    "react-test-renderer": "^16.0.0",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.8.1"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**.js"
+    ]
+  }
+}
